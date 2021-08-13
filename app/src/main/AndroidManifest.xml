@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Motivation">
         <activity
-            android:name="ui.splapshScreen"
+            android:name="ui.SplashScreen"
             android:exported="true"
             >
             <intent-filter>

@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.e.motivation.R
+import infra.MotivationConstants
 import infra.SecuritySharedPreferences
 import kotlinx.android.synthetic.main.activity_splapsh_screen.*
 
-class splapshScreen : AppCompatActivity(), View.OnClickListener {
+class SplashScreen : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var sharedPreferences : SecuritySharedPreferences
 
@@ -35,9 +36,9 @@ class splapshScreen : AppCompatActivity(), View.OnClickListener {
     private fun salveName() {
         val name = editName.text.toString()
         if (name == "") {
-            sharedPreferences.storeString("name",name)
             Toast.makeText(this, getString(R.string.mensagen_error), Toast.LENGTH_SHORT).show()
         } else {
+            sharedPreferences.storeString(MotivationConstants.Key.PERSON_NAME, name)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
 
