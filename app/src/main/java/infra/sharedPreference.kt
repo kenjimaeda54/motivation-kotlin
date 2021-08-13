@@ -3,17 +3,16 @@ package infra
 import android.content.Context
 import android.content.SharedPreferences
 
-class sharedPreference(context: Context)  {
+class SecuritySharedPreferences (context: Context) {
+    private val mSharedPreferences =  context.getSharedPreferences("motivation",Context.MODE_PRIVATE)
 
-    private val sharedPreferences =  context.getSharedPreferences("motivation",Context.MODE_PRIVATE)
-
-
-    fun storeString(key: String, value:String) {
-      sharedPreferences.edit().putString(key,value).apply()
+    fun storeString(key: String, value: String) {
+        mSharedPreferences.edit().putString(key,value);
     }
 
-    fun getString(key: String){
+    fun getString(key:String){
 
     }
+
 
 }
