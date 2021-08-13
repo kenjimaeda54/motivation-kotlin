@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">motivation</string>
+    <string name="welcone">Vamos la</string>
+    <string name="text_button">Salvar</string>
+    <string name="edit_name">Name</string>
+    <string name="mensagen_error">Por favor insira seu nome</string>
+</resources>
