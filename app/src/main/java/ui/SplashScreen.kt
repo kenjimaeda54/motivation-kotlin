@@ -9,6 +9,7 @@ import com.e.motivation.R
 import infra.MotivationConstants
 import infra.SecuritySharedPreferences
 import kotlinx.android.synthetic.main.activity_splapsh_screen.*
+import kotlin.math.log
 
 class SplashScreen : AppCompatActivity(), View.OnClickListener {
 
@@ -24,6 +25,22 @@ class SplashScreen : AppCompatActivity(), View.OnClickListener {
             supportActionBar!!.hide()
         }
         buttonSalve.setOnClickListener(this)
+        getName()
+    }
+
+
+    private fun getName() {
+       val name = sharedPreferences.getString(MotivationConstants.Key.PERSON_NAME)
+        //diferente a forma correta de colocar e !==
+        //para gerar erro no logocat e Logo.e("Mensagem",variavel ou mensagem)
+        if(name !== " ") {
+          val intent =  Intent(this,MainActivity::class.java)
+          startActivity(intent)
+          //desejo que o usuario nao consiga voltar para esta tela
+          //ou seja eliminiar o historico  entao uso a palavra reservada finish()
+          finish()
+
+       }
     }
 
     override fun onClick(view: View) {
@@ -41,6 +58,7 @@ class SplashScreen : AppCompatActivity(), View.OnClickListener {
             sharedPreferences.storeString(MotivationConstants.Key.PERSON_NAME, name)
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
 
         }
     }
