@@ -17,7 +17,7 @@
 
         <ImageView
 
-            android:id="@+id/imgFinite"
+            android:id="@+id/imgAll"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -35,7 +35,7 @@
             app:tint="@color/white" />
 
         <ImageView
-            android:id="@+id/Sum"
+            android:id="@+id/imgSum"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:layout_weight="1"
@@ -77,6 +77,7 @@
         android:background="@color/purple_700"/>
     
     <Button
+        android:id="@+id/buttonNewPhrase"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
