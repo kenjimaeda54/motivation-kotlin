@@ -35,7 +35,7 @@ Quando deseja que sua activy perca o histórico ou seja, usuário não consiga v
      
   //------------------------------//   
      
-     if(name !== " ") {
+     if(name != " ") {
           val intent =  Intent(this,MainActivity::class.java)
           startActivity(intent)
           finish()
