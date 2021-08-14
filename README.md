@@ -60,7 +60,7 @@ No exemplo abaixo utilizei um operador especial do kotlin ?: conhecido como elvi
 
 Utilizei recurso de classe abstrata para não precisar instanciar meus objetos, neste objetos centralizei meus casos de uso como o nome do usuário e o id das imagens que estavam selecionadas
 
-```koltin
+```kotlin
 class MotivationConstants private constructor(){
 
     object Key {
