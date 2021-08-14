@@ -13,6 +13,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        if(supportActionBar  != null ){
+            supportActionBar!!.hide()
+        }
         sharedPreferences = SecuritySharedPreferences(this)
         val name = sharedPreferences.getString(MotivationConstants.Key.PERSON_NAME)
         textName.text = name
